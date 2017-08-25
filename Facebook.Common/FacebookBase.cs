@@ -18,6 +18,8 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+using ru.crazypanda.common.net;
+
 namespace Facebook.Unity
 {
     using System;
@@ -137,9 +139,17 @@ namespace Facebook.Unity
                     FB.IsLoggedIn ? AccessToken.CurrentAccessToken.TokenString : string.Empty;
             }
 
-            FBUnityUtility.AsyncRequestStringWrapper.Request(this.GetGraphUrl(query), method, inputFormData, callback);
+            var http = new HTTPRequest( Constants.GraphUrl + query, new HTTPAttributes()
+            {
+                bodyParams = formData.ToDictionary( k => k.Key, k => ( object ) k.Value )
+            });
+            http.onComplete += response =>
+            {
+                callback(new GraphResult( response.text, response.Error?.Message ));
+            };
         }
 
+#if ORIGIN_REPO
         public void API(
             string query,
             HttpMethod method,
@@ -159,6 +169,7 @@ namespace Facebook.Unity
 
             FBUnityUtility.AsyncRequestStringWrapper.Request(this.GetGraphUrl(query), method, formData, callback);
         }
+#endif
 
         public abstract void GameGroupCreate(
             string name,
@@ -276,6 +287,7 @@ namespace Facebook.Unity
             return newData;
         }
 
+#if !JS
         private Uri GetGraphUrl(string query)
         {
             if (!string.IsNullOrEmpty(query) && query.StartsWith("/"))
@@ -285,5 +297,7 @@ namespace Facebook.Unity
 
             return new Uri(Constants.GraphUrl, query);
         }
+#endif
     }
+
 }

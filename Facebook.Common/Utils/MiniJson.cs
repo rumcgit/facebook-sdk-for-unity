@@ -1,3 +1,4 @@
+#if !JS
 /*
  * Copyright (c) 2012 Calvin Rien
  *
@@ -621,3 +622,15 @@ namespace Facebook.MiniJSON
         }
     }
 }
+#else
+using ru.crazypanda.common.utils;
+namespace Facebook.MiniJSON
+{
+    public static class Json
+    {
+        public static object Deserialize(string json) { return Tools.JSONParse< object >( json ); }
+
+        public static string Serialize(object obj) { return Tools.JSONStringify( obj ); }
+    }
+}
+#endif

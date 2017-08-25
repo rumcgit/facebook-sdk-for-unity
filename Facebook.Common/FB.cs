@@ -22,13 +22,10 @@ namespace Facebook.Unity
 {
     using System;
     using System.Collections.Generic;
-    using Facebook.Unity.Arcade;
     using Facebook.Unity.Canvas;
     using Facebook.Unity.Editor;
     using Facebook.Unity.Mobile;
     using Facebook.Unity.Mobile.Android;
-    using Facebook.Unity.Mobile.IOS;
-    using Facebook.Unity.Settings;
     using UnityEngine;
 
     /// <summary>
@@ -165,7 +162,7 @@ namespace Facebook.Unity
         }
 
         private static OnDLLLoaded OnDLLLoadedDelegate { get; set; }
-
+#if UNITY
         /// <summary>
         /// This is the preferred way to call FB.Init(). It will take the facebook app id specified in your "Facebook"
         /// => "Edit Settings" menu when it is called.
@@ -191,6 +188,7 @@ namespace Facebook.Unity
                 onHideUnity,
                 onInitComplete);
         }
+#endif
 
         /// <summary>
         /// If you need a more programmatic way to set the facebook app id and other setting call this function.
@@ -262,7 +260,11 @@ namespace Facebook.Unity
                                     logging,
                                     status,
                                     xfbml,
+#if UNITY
                                     FacebookSettings.ChannelUrl,
+#else
+                                    null,
+#endif
                                     authResponse,
                                     frictionlessRequests,
                                     javascriptSDKLocale,
@@ -272,6 +274,7 @@ namespace Facebook.Unity
                             };
                             ComponentFactory.GetComponent<CanvasFacebookLoader>();
                             break;
+#if UNITY
                         case FacebookUnityPlatform.IOS:
                             FB.OnDLLLoadedDelegate = delegate
                             {
@@ -301,6 +304,7 @@ namespace Facebook.Unity
                             };
                             ComponentFactory.GetComponent<ArcadeFacebookLoader>();
                             break;
+#endif
                         default:
                             throw new NotSupportedException("The facebook sdk does not support this platform");
                     }
@@ -565,6 +569,7 @@ namespace Facebook.Unity
             FacebookImpl.API(query, method, formData, callback);
         }
 
+#if UNITY
         /// <summary>
         /// Makes a call to the Facebook Graph API.
         /// </summary>
@@ -588,7 +593,7 @@ namespace Facebook.Unity
 
             FacebookImpl.API(query, method, formData, callback);
         }
-
+#endif
         /// <summary>
         /// Sends an app activation event to Facebook when your app is activated.
         ///

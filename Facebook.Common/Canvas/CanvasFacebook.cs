@@ -23,8 +23,6 @@ namespace Facebook.Unity.Canvas
     using System;
     using System.Collections.Generic;
     using System.Globalization;
-    using System.IO;
-    using System.Reflection;
 
     internal sealed class CanvasFacebook : FacebookBase, ICanvasFacebookImplementation
     {

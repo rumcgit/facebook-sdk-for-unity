@@ -1,3 +1,4 @@
+#if ORIGIN_REPO
 /**
  * Copyright (c) 2014-present, Facebook, Inc. All rights reserved.
  *
@@ -18,24 +19,31 @@
  * CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
  */
 
+﻿using System;
+using System.Collections.Generic;
+using UnityEngine;
+
 namespace Facebook.Unity
 {
-    ﻿using System;
-    using System.Collections.Generic;
-    using UnityEngine;
-
-    internal interface IAsyncRequestStringWrapper
+    internal class AsyncRequestStringWrapper : IAsyncRequestStringWrapper
     {
-        void Request(
+        public void Request(
             Uri url,
             HttpMethod method,
             WWWForm query = null,
-            FacebookDelegate<IGraphResult> callback = null);
+            FacebookDelegate<IGraphResult> callback = null)
+        {
+            AsyncRequestString.Request(url, method, query, callback);
+        }
 
-        void Request(
+        public void Request(
             Uri url,
             HttpMethod method,
             IDictionary<string, string> formData = null,
-            FacebookDelegate<IGraphResult> callback = null);
+            FacebookDelegate<IGraphResult> callback = null)
+        {
+            AsyncRequestString.Request(url, method, formData, callback);
+        }
     }
 }
+#endif

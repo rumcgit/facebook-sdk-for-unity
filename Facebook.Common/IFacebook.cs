@@ -103,13 +103,13 @@ namespace Facebook.Unity
             HttpMethod method,
             IDictionary<string, string> formData,
             FacebookDelegate<IGraphResult> callback);
-
+#if UNITY
         void API(
             string query,
             HttpMethod method,
             WWWForm formData,
             FacebookDelegate<IGraphResult> callback);
-
+#endif
         void ActivateApp(string appId = null);
 
         void GetAppLink(FacebookDelegate<IAppLinkResult> callback);

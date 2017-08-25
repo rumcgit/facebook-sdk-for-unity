@@ -81,23 +81,23 @@ namespace Facebook.Unity
             {
                 if (Debug.isDebugBuild)
                 {
-                    Debug.Log(msg);
+                    ru.crazypanda.common.utils.Log.message(msg);
                 }
             }
 
             public void Info(string msg)
             {
-                Debug.Log(msg);
+                ru.crazypanda.common.utils.Log.message(msg);
             }
 
             public void Warn(string msg)
             {
-                Debug.LogWarning(msg);
+                ru.crazypanda.common.utils.Log.warning(msg);
             }
 
             public void Error(string msg)
             {
-                Debug.LogError(msg);
+                ru.crazypanda.common.utils.Log.error(msg);
             }
         }
     }

@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>fac7e35f-fe81-4dac-836e-dfda63a25cac</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Facebook.Common</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)AccessToken.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppEventName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)AppEventParameterName.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Arcade\ArcadeFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Arcade\ArcadeFacebookGameObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Arcade\ArcadeFacebookLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Arcade\IArcadeFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Arcade\IArcadeFacebookImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Arcade\IArcadeFacebookResultHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Arcade\IArcadeWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CallbackManager.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\CanvasConstants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\CanvasFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\CanvasFacebookGameObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\CanvasFacebookLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\CanvasJSWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\ICanvasFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\ICanvasFacebookCallbackHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\ICanvasFacebookImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\ICanvasFacebookResultHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\ICanvasJSWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Canvas\JsBridge.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)ComponentFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Constants.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FacebookBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FacebookGameObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FacebookSdkVersion.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FacebookUnityPlatform.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)FB.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IFacebookCallbackHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IFacebookImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IFacebookResultHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)IPayFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MethodArguments.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)MethodCall.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\Android\AndroidFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\Android\AndroidFacebookGameObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\Android\AndroidFacebookLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\Android\IAndroidWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\IMobileFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\IMobileFacebookCallbackHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\IMobileFacebookImplementation.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\IMobileFacebookResultHandler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\IOS\IIOSWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\IOS\IOSFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\IOS\IOSFacebookGameObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\IOS\IOSFacebookLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\MobileFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Mobile\MobileFacebookGameObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)NativeDialogModes.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)OGActionType.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEditor\EditorFacebook.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEditor\EditorFacebookGameObject.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEditor\EditorFacebookLoader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEditor\EditorFacebookMockDialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEditor\EditorWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEditor\IEditorWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEditor\MockDialogs\EmptyMockDialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEditor\MockDialogs\MockLoginDialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PlatformEditor\MockDialogs\MockShareDialog.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\AccessTokenRefreshResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\AppInviteResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\AppLinkResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\AppReqeustResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\GraphResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\GroupCreateResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\GroupJoinResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IAccessTokenRefreshResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IAppInviteResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IAppLinkResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IAppRequestResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IGraphResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IGroupCreateResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IGroupJoinResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IInternalResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\ILoginResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IPayResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\IShareResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\LoginResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\PayResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\ResultBase.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\ResultContainer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Results\ShareResult.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\AsyncRequestString.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\AsyncRequestStringWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\FacebookLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\FacebookScheduler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\FacebookSchedulerFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\FBUnityUtility.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\HttpMethod.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\IAsyncRequestStringWrapper.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\IFacebookLogger.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\IFacebookScheduler.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\IFacebookSchedulerFactory.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\MiniJson.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Utils\Utilities.cs" />
+  </ItemGroup>
+</Project>
