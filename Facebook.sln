@@ -23,8 +23,13 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Facebook.Unity.IOS.Strippin
 EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Facebook.Common", "Facebook.Common\Facebook.Common.shproj", "{FAC7E35F-FE81-4DAC-836E-DFDA63A25CAC}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "ClientCommonLib", "..\..\..\Unisocial\ClientCommon\ClientCommonLib.shproj", "{C0AE6336-0D09-44FA-95A8-5C0B50239E2E}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Facebook.Common\Facebook.Common.projitems*{3dff6c0c-bb04-405d-a23f-95999630e7f8}*SharedItemsImports = 4
+		..\..\..\Unisocial\ClientCommon\ClientCommon.projitems*{3dff6c0c-bb04-405d-a23f-95999630e7f8}*SharedItemsImports = 4
+		..\..\..\Unisocial\ClientCommon\ClientCommon.projitems*{c0ae6336-0d09-44fa-95a8-5c0b50239e2e}*SharedItemsImports = 13
 		Facebook.Common\Facebook.Common.projitems*{fac7e35f-fe81-4dac-836e-dfda63a25cac}*SharedItemsImports = 13
 	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
