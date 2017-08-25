@@ -125,7 +125,7 @@ namespace Facebook.Unity
 
         public void API(
             string query,
-            HttpMethod method,
+            Facebook.Unity.HttpMethod method,
             IDictionary<string, string> formData,
             FacebookDelegate<IGraphResult> callback)
         {
@@ -139,9 +139,14 @@ namespace Facebook.Unity
                     FB.IsLoggedIn ? AccessToken.CurrentAccessToken.TokenString : string.Empty;
             }
 
+            var m = ru.crazypanda.common.net.HTTPMethod.GET;
+            if ( method == Facebook.Unity.HttpMethod.POST ) m = ru.crazypanda.common.net.HTTPMethod.POST;
+            else if ( method == Facebook.Unity.HttpMethod.DELETE ) m = ru.crazypanda.common.net.HTTPMethod.DELETE;
+
             var http = new HTTPRequest( Constants.GraphUrl + query, new HTTPAttributes()
             {
-                bodyParams = formData.ToDictionary( k => k.Key, k => ( object ) k.Value )
+                bodyParams = formData.ToDictionary( k => k.Key, k => ( object ) k.Value ),
+                method = m
             });
             http.onComplete += response =>
             {
